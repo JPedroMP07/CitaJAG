@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+/*font-family: 'Bungee Outline', cursive;*/
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Truculenta', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    background-image: url("https://cdn.discordapp.com/attachments/750028167225540648/1057327605478604862/ferrujaoNovo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgb(158, 158, 158);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(158, 158, 158);
+    border-radius: 20px;
+  }
+
+nav {
+    height: 8vh;
+    width: 100vw;
+    min-width: 600px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 99;
+    background: black;
+}
+
+.logo {
+    width: 64px;
+}
+
+nav p {
+    margin-left: 16px;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 16px;
+    padding: 0 5px;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover:after{
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0vh 5vh 5vh 5vh;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    background-color: rgb(104, 104, 104);
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.7);
+}
+
+.logo_login {
+    width: 20vw;
+}
+
+.area_login {
+    padding: 0px 2.4rem 2.4rem 2.4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.6rem;
+}
+
+input {
+    width: 30rem;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    box-shadow: 0 0 0 1px #FFF;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.area_email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.area_senha {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.button-cadastrar {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    padding: 4px;
+    width: 15rem;
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    background-color: rgb(0, 141, 24);
+    cursor: pointer;
+}
+
+.button-cadastrar:hover {
+    background-color: rgb(0, 88, 4);
+}
+
+.redefinir-senha {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.cadastrar {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+a {
+    color: #FFF;
+}
+
+@media (max-width: 850px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media (max-width: 710px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 575px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 470px) {
+    html {
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 280px) {
+    html {
+        font-size: 20%;
+    }
+}

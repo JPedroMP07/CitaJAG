@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+/*font-family: 'Bungee Outline', cursive;*/
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Truculenta', sans-serif;
+    margin-top: 8vh;
+    color: #FFF;
+    background-color: rgb(54, 54, 54);
+}
+
+/* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgb(158, 158, 158);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(158, 158, 158);
+    border-radius: 20px;
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+nav {
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
+    background: black;
+}
+
+nav label img.logo {
+    width: 65px;
+    line-height: 8vh;
+    margin-top: 6px;
+    margin-left: 1.6rem;
+}
+
+nav ul.opcoes_navegacao {
+    float: right;
+    margin-right: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 8vh;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #FFF;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -0.3rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: rgb(189, 189, 189);
+}
+
+nav a:hover:after{
+    width: 100%;
+}
+
+/* Início Deslogado PC */
+.checkbtnPC {
+    font-size: 25px;
+    color: #FFF;
+    float: right;
+    cursor: pointer;
+    line-height: 8vh;
+}
+
+.alinhar-verticalPC {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-top: 12px;
+}
+
+#checkPC {
+    display: none;
+}
+
+.mais-opcoesPC {
+    display: block;
+}
+
+div.funcao-sairPC li {
+    display: block;
+}
+
+.menuPC ul {
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    background: rgb(82, 82, 82);
+    top: 8vh;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+}
+
+nav .menu-opcoesPC ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 10px;
+}
+
+#checkPC:checked ~ ul {
+    right: 0;
+}
+
+/* Fim Deslogado PC */
+
+/* Carrossel anúncios locais */
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.espaco_anuncios {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.carrossel-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;    
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 4px;
+    height: 1vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+}
+/* Fim Carrossel anúncios locais */
+
+.checkbtn {
+    font-size: 25px;
+    color: #FFF;
+    float: right;
+    cursor: pointer;
+    line-height: 8vh;
+}
+
+.alinhar-vertical {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.img-perfil {
+    width: 32px;
+    height: 32px;
+    top: 4px;
+    object-fit: cover;
+    border: solid 2px;
+    border-color: rgb(179, 179, 179);
+    border-radius: 100%;
+    margin-left: 0.6vw;
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+}
+
+.mais-opcoes {
+    display: none;
+}
+
+div.funcao-sair li {
+    display: block;
+}
+
+.menu ul {
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    background: rgb(82, 82, 82);
+    top: 8vh;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+}
+
+nav .menu-opcoes ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 10px;
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
+
+.menu-deslogado {
+    display: none;
+}
+
+.checkbtn-deslogado {
+    font-size: 25px;
+    color: #FFF;
+    float: right;
+    margin-right: 2vw;
+    cursor: pointer;
+    line-height: 8vh;
+    display: none;
+}
+
+.select {
+    margin-top: 16px;
+}
+
+label {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+p {
+    margin: 4px 0 4px 0;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 4px;
+    height: 1vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+}
+
+.titulo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 16px 0 16px 0;
+}
+
+.div-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  
+  .btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+  .button-cadastrar {
+    border-color: #00ac33;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #006b12 inset, 0 0 0 0 #005e00;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .button-cadastrar:hover {
+    box-shadow: 0 0 10px 0 #eaf823 inset, 0 0 10px 4px #1ad853, 0 0 10px 8px #b10000;
+  }
+
+@media (max-width: 850px) {
+    html {
+        font-size: 52%;
+    }
+
+    .opcoes_navegacao {
+        display: none;
+    }
+
+    .menu-deslogado ul {
+        display: block;
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background: rgb(82, 82, 82);
+        top: 8vh;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .checkbtn-deslogado {
+        display: block;
+        margin-right: 32px;
+    }
+    
+    .menu ul {
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background: rgb(82, 82, 82);
+        top: 8vh;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    .mais-opcoes {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3.5rem 0;
+        line-height: 1rem;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+}
+
+@media (max-width: 710px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 575px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 470px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+       font-size: 40%;
+    }
+}
+
+@media (max-width: 280px) {
+    html {
+        font-size: 40%;
+    }
+}

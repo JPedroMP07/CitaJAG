@@ -1,0 +1,17 @@
+Options -Indexes
+
+<FilesMatch \.json$>
+    Deny from all
+</FilesMatch>
+
+<FilesMatch \.lock$>
+    Deny from all
+</FilesMatch>
+
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^inicio$ ./index.php [NC]

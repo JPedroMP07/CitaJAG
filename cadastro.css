@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Truculenta', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #FFF;
+    background-color: rgb(54, 54, 54);
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgb(158, 158, 158);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(158, 158, 158);
+    border-radius: 20px;
+  }
+
+/* Carrossel anúncios locais */
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.espaco_anuncios {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.carrossel-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;    
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 4px;
+    height: 1vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+}
+/* Fim Carrossel anúncios locais */
+
+.div-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-cadastro {
+    width: 130px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.divInfoPessoais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 16px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    background-color: rgb(66, 66, 66);
+}
+
+.atencao {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: rgb(255, 251, 0);
+}
+
+.divEquipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 16px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    background-color: rgb(66, 66, 66);
+}
+
+.divFuncao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 16px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    background-color: rgb(66, 66, 66);
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+label {
+    margin-right: 2px;
+}
+
+.cadastro_inputs {
+    margin-left: 2px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-style: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px white;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+
+.genero_label {
+    margin-right: 1.5rem;
+}
+
+select {
+    margin-left: 2px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-style: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(0, 121, 20), rgb(18, 158, 0), rgb(4, 133, 0), rgb(181, 184, 19), rgb(219, 223, 19), rgb(221, 217, 0), rgb(138, 0, 0), rgb(172, 0, 0), rgb(182, 0, 0));
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px white;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+
+.button-cadastrar {
+    margin: 1.6rem 0 1.6rem 0;
+    color: #FFF;
+    padding: 1rem;
+    background-color: rgb(4, 109, 0);
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.button-cadastrar:hover {
+    background-color: rgb(0, 141, 0);
+}
+
+@media (max-width: 850px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media (max-width: 710px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    html {
+        font-size: 48%;
+    }
+}
+
+@media (max-width: 470px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 280px) {
+    html {
+        font-size: 35%;
+    }
+}
